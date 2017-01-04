@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fishingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fish Aquarium.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rUU-gM-6CZ">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-zg-HKU">
+                                <rect key="frame" x="16" y="518" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.9817994236946106" green="0.050892412662506104" blue="0.049061022698879242" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thk-Pz-kZ3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7c-uf-c99">
+                                <rect key="frame" x="201" y="524" width="52" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.9817994236946106" green="0.050892412662506104" blue="0.049061022698879242" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOV-pa-TMs">
+                                <rect key="frame" x="273" y="522" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.9817994236946106" green="0.050892412662506104" blue="0.049061022698879242" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rUU-gM-6CZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2G3-fz-fwM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rUU-gM-6CZ" secondAttribute="trailing" constant="-20" id="79L-9H-cP3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N7c-uf-c99" secondAttribute="bottom" constant="26" id="Att-y5-jJy"/>
+                            <constraint firstItem="NOV-pa-TMs" firstAttribute="leading" secondItem="N7c-uf-c99" secondAttribute="trailing" constant="20" id="IKi-zj-VYE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NOV-pa-TMs" secondAttribute="trailing" constant="20" id="Pn0-ol-r79"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DnM-zg-HKU" secondAttribute="bottom" constant="20" id="Rx5-8h-xEt"/>
+                            <constraint firstItem="DnM-zg-HKU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cC6-mP-8bJ"/>
+                            <constraint firstItem="rUU-gM-6CZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cMa-1A-P8i"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rUU-gM-6CZ" secondAttribute="bottom" id="rtm-Sp-vUC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NOV-pa-TMs" secondAttribute="bottom" constant="25" id="uvr-oO-QRf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblLevel" destination="NOV-pa-TMs" id="01u-Gf-emD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fish Aquarium.jpg" width="288" height="512"/>
+    </resources>
+</document>
